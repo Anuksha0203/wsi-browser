@@ -1,0 +1,19 @@
+name: preprocessorenv
+channels:
+  - anaconda
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.6.15
+  - pip
+  - pillow
+  - opencv
+  - conda-build
+  - jupyter
+  - numpy
+  - pandas
+  - matplotlib
+  - black
+  - scipy
+  - pip:
+    - --editable .
