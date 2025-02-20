@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "image": "/wsi/png/test_001.png",
+    "name": "wsi 1",
+    "description": "Description for WSI 1",
+    "layers": {"Layer1": "Layer1"},
+    "alt": "WSI 1"
+  },
+  {
+    "id": 2,
+    "image": "/wsi/png/test_005.png",
+    "name": "wsi 5",
+    "description": "Description for WSI 5",
+    "layers": {"Layer1": "Layer1", "Layer2": "Layer2"},
+    "alt": "WSI 5"
+  },
+  {
+    "id": 3,
+    "image": "/wsi/png/test_004.png",
+    "name": "wsi 4",
+    "description": "Description for WSI 4",
+    "layers": {"Layer1": "Layer1", "Layer2": "Layer2", "Layer3": "Layer3"},
+    "alt": "WSI 4"
+  }
+]

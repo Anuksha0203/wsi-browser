@@ -1,0 +1,122 @@
+
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: var(--grey-100);
+  border-bottom: 3px solid var(--grey-900);
+  height: 4rem;
+  padding: 0 5%;
+  z-index: 25;
+}
+
+.hover-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem; /* Only 10px high, right at the top of the screen */
+  z-index: 999; /* Slightly below the header */
+  background: transparent; /* Invisible area to detect hover */
+  pointer-events: auto;
+}
+
+.hover-area:hover {
+  height: 4rem;
+}
+
+/* Wrapper for the Header */
+.headerWrapper {
+  position: fixed;
+  top: -100%; /* Start off-screen above */
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  background: white; /* Match the header background color */
+  transition: top 0.3s ease; /* Smooth sliding effect */
+}
+
+/* Header visible state */
+.headerWrapper.visible {
+  top: 0; /* Slide into view */
+}
+
+.title {
+  margin: 1rem;
+  color: var(--grey-900);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.125rem;
+  cursor: default;
+  text-decoration: none;
+  z-index: 27;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.title:focus {
+  outline-color: var(--brand-500);
+}
+
+.actions {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--brand-900);
+  font-size: 1.15rem;
+  cursor: pointer;
+
+  transition: transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+}
+
+.navigation a:hover {
+  transform: scale(1.1); 
+}
+
+.hamburger {
+  display: block;
+  width: 2rem;
+  height: 45%;
+  z-index: 27;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  position: relative;
+}
+
+
+@media (min-width: 48rem) {
+
+  .actions {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+}

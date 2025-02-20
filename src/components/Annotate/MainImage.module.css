@@ -1,0 +1,45 @@
+#map {
+  height: 100%; /* Define height */
+  width: 100%;
+}
+
+.text{
+  text-align: center;
+  vertical-align: middle;
+  font-size: 100px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.subtext{
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center; /* Ensures the text inside is centered */
+  height: 10vh; /* Makes the container fill the full height of the viewport */
+  width: 100%; /* Makes the container fill the full width of the viewport */
+  color: var(--grey-400) !important;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0; /* Resets default margins to ensure alignment */
+}
+
+.containerImageGrid{
+  background: var(--grey-100);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Flexible columns */
+  gap: 16px; /* Space between images */
+  padding: 5%; /* Optional padding around the grid */
+}
+
+.containerImageGrid img{
+  width: 395px;
+  height: 395px;
+  object-fit: cover; /* Ensures the image is cropped to fill the area while maintaining its aspect ratio */
+  object-position: center; /* Centers the image within the container */
+}
+
+.containerImageGrid img:hover {
+  border: 3px solid var(--grey-200);
+}

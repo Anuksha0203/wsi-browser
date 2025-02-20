@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "/wsi/png/test_001.png",
+    "name": "wsi 1",
+    "description": "Description for WSI 1",
+    "alt": "WSI 1"
+  },
+  {
+    "id": 2,
+    "image": "/wsi/png/test_005.png",
+    "name": "wsi 5",
+    "description": "Description for WSI 5",
+    "alt": "WSI 5"
+  },
+  {
+    "id": 3,
+    "image": "/wsi/png/test_004.png",
+    "name": "wsi 4",
+    "description": "Description for WSI 4",
+    "alt": "WSI 4"
+  }
+]

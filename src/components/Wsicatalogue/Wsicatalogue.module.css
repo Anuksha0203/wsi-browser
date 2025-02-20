@@ -1,0 +1,19 @@
+.table {
+    border: 3px solid var(--grey-900);
+    width: 1000px;
+    height: 200px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.th {
+    border: 1px solid var(--grey-700);
+    border-bottom: 2px solid black;
+}
+
+.td {
+    border: 1px solid var(--grey-700);
+    text-align: center;
+}

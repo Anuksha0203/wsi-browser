@@ -1,0 +1,136 @@
+.sidebarLeft {
+  position: fixed;
+  left: -300px;
+  transition: left 0.3s ease;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--grey-200); /* could change colour of the sidebar */
+  outline-color: black;
+  outline-style: auto;
+  color: black;
+  padding: 20px;
+  z-index: 1000;
+
+  &.open {
+    left: 0;
+  }
+
+  .leftEdgeButton {
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      width: 30px;
+      height: 50px;
+      background-color: var(--grey-900);
+      color: var(--grey-100);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1.2rem;
+  }
+
+  .sidebarContent {
+    margin-top: 20px;
+    max-height: 100%; /* Adjust this value to your desired height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+    scrollbar-width: thin; /* Optional: Customizes the scrollbar width (for Firefox) */
+  }
+
+  .sidebarContent::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar (for WebKit browsers) */
+  }
+
+  .sidebarContent::-webkit-scrollbar-thumb {
+    background-color: var(--grey-400); /* Adjust scrollbar thumb color */
+    border-radius: 4px;
+  }
+}
+
+.sidebarRight {
+  position: fixed;
+  right: -300px;
+  transition: right 0.3s ease;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--grey-200);
+  outline-color: black;
+  outline-style: auto;
+  color: black;
+  padding: 20px;
+  z-index: 1000;
+
+  &.open {
+    right: 0;
+  }
+
+  .rightEdgeButton {
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      width: 30px;
+      height: 50px;
+      background-color: var(--grey-900);
+      color: var(--grey-100);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1.2rem;
+  }
+
+  .sidebarContent {
+    margin-top: 20px;
+  }
+
+  .layerItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 8px;
+    background-color: var(--grey-100);
+    border: 1px solid var(--grey-300);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .layerItem:hover {
+    background-color: var(--grey-200);
+  }
+  
+  .layerIcon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--grey-400);  /* Background color of the square */
+    border-radius: 4px;  /* Optional: rounded corners for the square */
+    margin-right: 10px;  /* Space between icon and text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;  /* Color of the icon, adjust as needed */
+    font-size: 16px;  /* Adjust the icon size */
+  }
+  
+  .layerName {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--grey-900);
+  }
+  
+}
+
+.sidebarHeader {
+font-size: 18px;
+font-weight: bold;
+padding: 10px 0;
+border-bottom: 1px solid var(--grey-300);
+color: var(--grey-800);
+}
