@@ -1,4 +1,4 @@
-name: preprocessorenv
+name: wsi-serverenv
 channels:
   - anaconda
   - defaults
