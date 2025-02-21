@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "wsiThumbnails": "python ./backend/wsiThumbnails.py",
+    "wsiThumbnails": "python ./backend/wsi-server/wsiThumbnails.py",
     "dev": "npm run wsiThumbnails && next dev",
     "build": "next build",
     "start": "next start",

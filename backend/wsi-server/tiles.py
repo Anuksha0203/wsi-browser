@@ -24,7 +24,8 @@ async def get_tile(image_name: str, z: int, x: int, y: int):
         #return StreamingResponse(BytesIO(tile_data), media_type="image/png", headers={"Cache-Control": "public, max-age=2592000"})
     
     try:
-        wsi_path = f"../public/wsi/tif/{image_name}"
+        base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../public/wsi/tif"))
+        wsi_path = os.path.join(base_dir, image_name)
         if not os.path.exists(wsi_path):
             raise HTTPException(status_code=404, detail=f"WSI file '{image_name}' not found")
         
