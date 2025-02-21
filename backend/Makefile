@@ -1,5 +1,7 @@
-PROJECT_NAME = wsi-server
-DOCKER_IMAGE_NAME = wsi-server
+PROJECT_NAME = wsi_server
+DOCKER_IMAGE_NAME = wsi_server
+
+CURRENT_DIR := $(shell pwd)
 
 #################################################################################
 # SETUP COMMANDS          	                                                    #
@@ -26,15 +28,13 @@ install_isyntax_sdk:
 image:
 	docker build -t $(DOCKER_IMAGE_NAME) .
 
-run_wopr:
+run:
 	docker run --shm-size=64G \
-				--gpus all \
 				--rm \
 				--name $(USER)-$(PROJECT_NAME) \
 				--ipc=host \
 				--network=host \
-				-v /home/$(USER)/Development/$(PROJECT_NAME):/workspace/$(PROJECT_NAME) \
-				-v /data2:/data \
-				-v /nvme:/scratch \
+				-v $(CURRENT_DIR):/workspace/$(PROJECT_NAME) \
+				-v $(CURRENT_DIR)/../public:/workspace/public \
 				-it $(DOCKER_IMAGE_NAME)
 

@@ -19,11 +19,11 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 # Create the environment
-WORKDIR /workspace/wsi-server
-ADD wsi-server ./wsi-server
+WORKDIR /workspace/wsi_server
+ADD wsi_server ./wsi_server
 COPY environment.yml setup.py Makefile ./
 RUN conda env create -f environment.yml
-ENV CONDA_DEFAULT_ENV=wsi-serverenv
+ENV CONDA_DEFAULT_ENV=wsi_serverenv
 RUN echo "conda activate $CONDA_DEFAULT_ENV" >> ~/.bashrc
 
 # Install the isyntax sdk

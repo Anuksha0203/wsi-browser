@@ -1,4 +1,4 @@
-name: wsi-serverenv
+name: wsi_serverenv
 channels:
   - anaconda
   - defaults
@@ -15,5 +15,6 @@ dependencies:
   - matplotlib
   - black
   - scipy
+  - flask
   - pip:
     - --editable .
