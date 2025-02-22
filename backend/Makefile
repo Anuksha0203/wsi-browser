@@ -34,7 +34,7 @@ run:
 				--name $(USER)-$(PROJECT_NAME) \
 				--ipc=host \
 				--network=host \
-				-v $(CURRENT_DIR):/workspace/$(PROJECT_NAME) \
+				-v $(CURRENT_DIR):/workspace \
 				-v $(CURRENT_DIR)/../public:/workspace/public \
 				-it $(DOCKER_IMAGE_NAME)
 

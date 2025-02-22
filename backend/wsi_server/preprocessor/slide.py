@@ -5,7 +5,7 @@ from typing import List, NamedTuple
 
 import numpy as np
 from PIL import Image
-from preprocessor.utils.geometry import Point, Size
+from utils.geometry import Point, Size
 
 
 class Region(NamedTuple):

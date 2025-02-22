@@ -7,12 +7,12 @@ from multiprocessing import cpu_count
 import numpy as np
 from PIL import Image
 
-from preprocessor.slides.slide import SlideBase, Region
-from preprocessor.utils.geometry import Size, Point
+from preprocessor.slide import SlideBase, Region
+from utils.geometry import Size, Point
 
-import preprocessor.slides.libraries.pixelengine as pixelengine
-import preprocessor.slides.libraries.softwarerendercontext as softwarerendercontext
-import preprocessor.slides.libraries.softwarerenderbackend as softwarerenderbackend
+import preprocessor.libraries.pixelengine as pixelengine
+import preprocessor.libraries.softwarerendercontext as softwarerendercontext
+import preprocessor.libraries.softwarerenderbackend as softwarerenderbackend
 
 render_context = softwarerendercontext.SoftwareRenderContext()
 render_backend = softwarerenderbackend.SoftwareRenderBackend()
