@@ -3,7 +3,7 @@ from io import BytesIO
 from pathlib import Path
 import os
 
-from preprocessorMain.preprocessor.slides.isyntax import Slide, Region
+from preprocessor.isyntax import Slide, Region
 
 app = Flask(__name__)
 
